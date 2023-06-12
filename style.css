@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+:root{
+    --primary:black;
+    --secondary:rgb(93 93 93);
+    
+
+}
+header{
+    width: 100%;
+    height: 100vh;
+}
+.nav1{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 3px 0px 2px grey;
+    text-align: center;
+}
+.left{
+    flex-basis: 50%;
+    letter-spacing: 2px;
+
+}
+.nav1 .left a{
+    color: var(--secondary);
+    margin: 0px 5px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+.right i{
+    margin: 0px 15px;
+    padding: 8px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+.right{
+    flex-basis: 50%;
+}
+.right i:hover{
+    transform: rotate(360deg);
+}
+/*NAV2 START*/
+.nav2{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+} 
+.logo img{
+    max-width: 60px;
+}
+.nav2-left{
+    font-size: 14px;
+}
+
+.nav2-left,.logo,.nav2-right{
+    cursor: pointer;
+    margin: auto;
+    flex-basis: 30%;
+}
+.nav2 .nav2-left i{
+    margin-left: 17px;
+    padding: 0px 4px;
+}
+.nav2-right i{
+    margin: 0px 6px
+}
+.nav2-right{
+    font-size: 14px;
+}
+/*NAV 3 START*/
+.nav3{
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+}
+.nav3 ul{
+    list-style: none;
+    text-align: center;
+}
+.nav3 ul li{
+    display: inline-block;
+    width: 150px;
+    position: relative;
+    z-index: 99;
+}
+.nav3 ul li a{
+    text-decoration: none;
+    color: rgb(117 115 115);
+    display: block;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+.nav3 ul li a:hover{
+    color:var(--primary);
+    font-weight: bold;
+}
+.nav3 ul li i{
+    margin: 0px 5px;
+}
+.nav3 ul ul{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    display: none;
+}
+.nav3 ul ul li a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+.nav3 ul ul li{
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+/* NAV 3 mai jo 'ul' hai usme jo 'li' hai uspar hover karain toh uske andar ki 'ul; khul jaye*/
+.nav3 ul li:hover>ul{
+    display: block ;
+}
+/*FEATURED*/
+.featured{
+    width: 100%;
+    height: 90%;
+    background: url(./Assets/Nike-Mag.webp) no-repeat;
+    background-size: cover;
+    background-position: top;
+    max-width: 65%;
+    left: 20%;
+    position: relative;
+}
+.featured-text{
+    max-width: 500px;
+    position: absolute;
+    text-align: center;
+    top: 28%;
+    left: 4%;
+    cursor: pointer;
+    letter-spacing: 5px;
+    font-size: 13px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.featured-text button{
+    padding: 7px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 20px 0px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+}
+.featured-text button:hover{
+    background-color: var(--secondary);
+}
+
+/*PRODUCT*/
+.latest{
+    padding: 70px 100px;
+    top: 172px;
+    position: relative
+}
+.latest-2{
+    padding: 70px 40px;
+    top: 60px;
+    position: relative
+}
+.latest-3{
+    padding: 70px 100px;
+    position: relative
+
+}
+.product-intro{
+    text-align: center;
+    margin: 50px 0px;
+}
+.product-intro h1{
+    color:var(--secondary);
+    letter-spacing: 0.2rem;
+    font-size: 28px;
+    font-family: 'Roboto Mono';
+}
+.product-intro p{
+    margin: 12px 0px;
+    letter-spacing: 1px;
+}
+.card-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 3rem 0;
+}
+.card{
+    flex-basis: 20%;
+    padding: 0.8rem;
+    position: relative;
+    transition: 0.5s;
+    
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.card h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+}
+.card p{
+    font-family: 'Montserrat', sans-serif;
+
+}
+.card img{
+    width: 90%;
+}
+.card i{
+    color: goldenrod;
+    margin: 10px 0px;
+    font-size: 15px;
+}
+.card button{
+    color: white;
+    background-color: rgb(146, 146, 146);
+    outline: none;
+    padding: 4px 18px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+}
+.card button:hover{
+    background-color: black;
+}
+/*Essentials*/
+.container{
+    width: 105%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 3rem 0;
+}
+.essentials{
+    flex-basis: 50%;
+    padding: 0.8rem;
+    position: relative;
+    
+}
+.essentials button{
+    padding: 7px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 20px 0px;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    position: relative;
+    bottom: 70px;
+    left: 15px;
+}
+.essentials img{
+    width: 105%;
+
+}
+/*SWIPER*/
+
+.trends .swiper {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .trends .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  .trends .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+ .swipe-btn {
+    color: black;
+    color: white;
+    background-color: rgb(146, 146, 146);
+    outline: none;
+    margin-top: 15px;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    left: 46%;
+    position: relative;
+    top: 50px;
+    
+  }
+  footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+
+ }
+footer div{
+    flex-basis: 30%;
+}
+footer h1{
+   /*font-family: 'Montserrat', sans-serif;*/
+   font-family: 'Roboto Mono';
+    font-weight: 500;
+    font-size: 25px;
+}
+footer i{
+    margin: 0px 5px;
+}
+footer p{
+    color: rgb(164, 164, 164);
+}
+footer .copy{
+    font-size: 12px;
+
+}
+.sidenav{display: none;}
+
+#menubar{
+    display: none;
+}
+@media only screen and (max-width:650px){
+    .sidenav{
+        display: block;
+    }
+    #menubar{
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0%,-50%);
+        z-index: 99;
+        background-color: white; 
+        font-size: 1.2rem;
+        padding: 20px 10px;
+        animation: animate 5s ease infinite;
+
+    }
+    @keyframes animate {
+        0%{
+            background-color: white;
+        }
+        100%{
+            background-color:rgb(184, 183, 183) ;
+        }
+    }
+    .sidenav{
+        width: 100px;
+        height: 100vh ;
+        top: 0;
+        left: 0;
+
+        z-index: 2;
+        background-color: white;
+        display: block;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+    }
+    .sidenav ul{
+        list-style: none;
+        
+    }
+    .sidenav ul li{
+        display: block;
+        width: 200px;
+        position: relative;
+        z-index: 99;
+        margin: 10px 20px;
+    }
+    .sidenav ul li a{
+        text-decoration: none;
+        color: rgb(117 115 115);
+        display: block;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px 20px;
+    
+    }
+    .sidenav ul li a:hover{
+        color:var(--primary);
+        font-weight: bold;
+    }
+    .sidenav ul li i{
+        margin: 0px 5px;
+    }
+    .sidenav ul ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        display: none;
+    }
+    .sidenav ul ul li a{
+        font-family: Arial, Helvetica, sans-serif;
+        color: black;
+    }
+    .sidenav ul ul li{
+        border-bottom: 1px solid black;
+        background-color: white;
+    }
+    /* NAV 3 mai jo 'ul' hai usme jo 'li' hai uspar hover karain toh uske andar ki 'ul; khul jaye*/
+    .sidenav ul li:hover>ul{
+        display: block ;
+    } 
+    .nav1{
+       position: relative;
+       z-index: 2;
+       background-color: white;
+    }
+    .right i{
+        font-size: 15px;
+        margin: 0px 5px;
+    }
+    .nav2{
+        width: 100%;
+        height: 70px;
+    }  
+    .nav2 .nav2-left i{
+        margin-left: 0px;
+    }
+    .nav2-left,.logo,.nav2-right{
+        cursor: pointer;
+        margin: auto;
+        flex-basis: 30%;
+        font-size: 10px;
+    }
+    .nav3{
+        display: none;
+    }
+    .featured-text{
+        max-width: 500px;
+        position: absolute;
+        text-align: center;
+        top: 28%;
+        left: 2%;
+        cursor: pointer;
+        letter-spacing: 0px;
+        font-size: 9px;
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    }
+    .featured-text button{
+        padding: 2px 7px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin: 20px 0px;
+        background-color: black;
+        color: white;
+        border-radius: 15px;
+        font-size: 10px;
+    }
+    .featured{
+        width: 100%;
+        height: 100%;
+        background: url(Nike-Mag.webp) no-repeat;
+        background-size: cover;
+        background-position: top;
+        max-width: 65%;
+        left: 20%;
+        position: relative;
+    }
+    .latest{
+        padding: 0px 100px;
+        top: 140px;
+        position: relative;
+    }
+    .card-container{
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        cursor: pointer;
+        margin: 1rem 0;
+    }
+    .card{
+        flex-basis: 20%;
+        padding: 0.5rem;
+        position: relative;
+        transition: 0.5s;
+    }
+    .card i{
+        color: goldenrod;
+        margin: 10px -3px;
+        font-size: 10px;
+        align-items: baseline;
+    }
+    .card p{
+        font-family: 'Montserrat', sans-serif;
+        margin: -7px;
+        font-size: 12px;
+    }
+    .card button{
+        color: white;
+        background-color: rgb(146, 146, 146);
+        outline: none;
+        margin-top: 15px;
+        padding: 8px 3px;
+        cursor: pointer;
+        border-radius: 10px;
+        border: none;
+        font-size: 7px;
+        align-items: baseline;
+    }
+    .card h1{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 10px;
+    }
+    .latest-3{
+        padding: 20px 50px;
+        position: relative
+    
+    }
+    .trends .swiper {
+        width: 60%;
+        padding: 10px;
+      }
+    
+      .trends .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 260px;
+        height: 260px;
+      }
+    
+      .trends .swiper-slide img {
+        display: block;
+        width: 90%;
+        height: 90%;
+      }
+     .swipe-btn {
+        color: black;
+        color: white;
+        background-color: rgb(146, 146, 146);
+        outline: none;
+        margin-top: 0px;
+        padding: 8px 20px;
+        cursor: pointer;
+        border-radius: 20px;
+        border: none;
+        left: 40%;
+        position: relative;
+        top: 20px;
+      }
+      .container{
+        width: 105%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        margin: 3rem 0;
+    }
+    .essentials{
+        flex-basis: 40%;
+        padding: 0.8rem;
+        position: relative;
+        
+    }
+    .essentials button{
+        padding: 5px 10px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        margin: 20px 0px;
+        background-color: white;
+        color: black;
+        border-radius: 15px;
+        position: relative;
+        bottom: 70px;
+        left: 15px;
+        font-size: 10px;
+    }
+    .essentials img{
+        width: 105%;  
+    
+    }
+    footer div{
+        flex-basis: 3 0%;
+    }
+}
